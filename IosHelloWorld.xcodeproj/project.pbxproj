@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A82D9D1A4BA29400C32FE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/IosHelloWorld.entitlements; sourceTree = "<group>"; };
 		04B25A411A3585F6007D7FDE /* IosHelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosHelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B25A441A3585F6007D7FDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04B25A461A3585F6007D7FDE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +83,7 @@
 		04B25A381A3585F6007D7FDE = {
 			isa = PBXGroup;
 			children = (
+				04A82D9E1A4BA29400C32FE3 /* IosHelloWorld.entitlements */,
 				04B25A4A1A3585F6007D7FDE /* iosHelloWorld */,
 				04B25A631A3585F6007D7FDE /* iosHelloWorldTests */,
 				04B25A431A3585F6007D7FDE /* Frameworks */,
@@ -204,6 +206,17 @@
 				TargetAttributes = {
 					04B25A401A3585F6007D7FDE = {
 						DevelopmentTeam = 5AF7LWK3FF;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+							com.apple.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					04B25A5B1A3585F6007D7FDE = {
 						TestTargetID = 04B25A401A3585F6007D7FDE;
@@ -279,6 +292,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		04A82D9E1A4BA29400C32FE3 /* IosHelloWorld.entitlements */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04A82D9D1A4BA29400C32FE3 /* en */,
+			);
+			name = IosHelloWorld.entitlements;
+			sourceTree = "<group>";
+		};
 		04B25A4D1A3585F6007D7FDE /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -375,6 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = IosHelloWorld.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -382,6 +404,7 @@
 				INFOPLIST_FILE = "emptyProj/IosHelloWorld-Info.plist";
 				PRODUCT_NAME = IosHelloWorld;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,6 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = IosHelloWorld.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -398,6 +422,7 @@
 				INFOPLIST_FILE = "emptyProj/IosHelloWorld-Info.plist";
 				PRODUCT_NAME = IosHelloWorld;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
